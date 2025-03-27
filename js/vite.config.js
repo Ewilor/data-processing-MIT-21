@@ -12,7 +12,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/literature': {
-        target: 'http://localhost:8080/Lab2-2.0-SNAPSHOT/',
+        target: 'http://localhost:8080/Lab3-3.0-SNAPSHOT',
         changeOrigin: true,
         secure: false
       }

@@ -1,17 +1,23 @@
 package org.example;
 
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        String path = "src/main/resources/data.json";
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        // Перевірка, чи існує файл
+        System.out.println("Файл існує? " + Files.exists(Paths.get(path)));
+
+        // Спроба прочитати файл
+        try {
+            String json = new String(Files.readAllBytes(Paths.get(path)));
+            System.out.println("Зміст файлу: " + json);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

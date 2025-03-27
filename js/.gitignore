@@ -1,0 +1,59 @@
+/bin/
+/target/
+/out/
+/dist/
+
+/# IntelliJ IDEA
+.idea/
+/*.iml
+
+# Eclipse
+/.project
+/.classpath
+/.settings/
+
+# NetBeans
+/nbproject/
+
+# Maven
+/.mvn/
+target/
+/*.log
+
+# Gradle
+.gradle/
+build/
+
+# Java .class файли
+*.class
+
+# Файли та каталоги, що містять персональні налаштування IDE
+/.idea/
+/.vscode/
+/.DS_Store
+
+# Файли журналів та тимчасові файли
+*.log
+*.bak
+*.swp
+
+# Конфігураційні файли середовища
+*.properties
+*.yml
+*.yaml
+
+# Специфічні файли конфігурації Java
+/.env
+
+# Файли для тестів
+/test-output/
+/test-results/
+
+/# Налаштування для створення jar
+*.jar
+*.war
+*.ear
+
+# Приватні файли
+*.pem
+*.p12
