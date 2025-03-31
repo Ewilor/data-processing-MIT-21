@@ -53,7 +53,6 @@ public class LiteratureService {
 
             return new Gson().fromJson(json, new TypeToken<List<Literature>>() {}.getType());
         } catch (IOException e) {
-            System.out.println("Помилка при читанні файлу: " + e.getMessage());
             return new ArrayList<>();
         }
     }
@@ -61,7 +60,6 @@ public class LiteratureService {
     private void saveLiteratureList() {
         try {
             String json = new Gson().toJson(literatureList);
-            System.out.println("Збереження даних у файл: " + json); // Логування
             FileUtil.writeToFile(FILE_PATH, json);
         } catch (IOException e) {
             e.printStackTrace();

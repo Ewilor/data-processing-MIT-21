@@ -38,9 +38,8 @@
   const fetchBooks = async () => {
     try {
       const response = await fetch("/literature");
-      if (!response.ok) throw new Error("Помилка отримання даних");
       books.value = await response.json();
-      console.log("Отримані книги:", books.value); // Лог в консоль
+      console.log("Отримані книги:", books.value);
     } catch (e) {
       console.error("Помилка при отриманні даних:", e);
     }
